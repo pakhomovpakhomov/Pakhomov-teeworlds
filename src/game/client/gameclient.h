@@ -204,6 +204,14 @@ public:
 		void Reset(CGameClient *pGameClient, int CLientID);
 	};
 
+	
+	//antiping
+	int m_Average_Prediction_Offset;
+	int m_Prediction_Offset_Summ;
+	int m_Prediction_Offset_Count;
+
+
+
 	CClientData m_aClients[MAX_CLIENTS];
 	int m_LocalClientID;
 	int m_TeamCooldownTick;

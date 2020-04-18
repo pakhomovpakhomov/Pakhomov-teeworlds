@@ -244,6 +244,12 @@ void CGameClient::OnConsoleInit()
 	m_pMapLayersForeGround = &::gs_MapLayersForeGround;
 	m_pStats = &::gs_Stats;
 
+	// Antiping
+	m_Average_Prediction_Offset = -1;
+	m_Prediction_Offset_Summ = 0;
+	m_Prediction_Offset_Count = 0;
+
+	
 	// make a list of all the systems, make sure to add them in the corrent render order
 	m_All.Add(m_pSkins);
 	m_All.Add(m_pCountryFlags);
